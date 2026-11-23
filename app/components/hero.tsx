@@ -1,17 +1,18 @@
 export default function Hero() {
   return (
-    <section className="w-full bg-[#0a192f] text-white min-h-screen flex flex-col">
-      <h1 className="text-4xl font-bold">Hi, my name is</h1>
-      <h2 className="text-3xl font-semibold">Samuel Sylvester</h2>
-      <p className="text-lg text-gray-600">I build things for the web.</p>
-      <p className="text-lg text-gray-600">
-        I’m a software engineer specializing in building (and occasionally
-        designing) exceptional digital experiences. Currently, I’m focused on
-        building myself and my skills(And yes, I am copying Brittany Chiang).
+    <section className="flex min-h-screen max-w-[1000px] flex-col justify-center py-24">
+      <p className="mb-5 font-mono text-sm text-[#64ffda] sm:text-base">Hi, my name is</p>
+      <h1 className="text-[clamp(40px,8vw,80px)] font-bold leading-[1.05] text-[#ccd6f6]">Samuel Sylvester.</h1>
+      <h2 className="mt-2 text-[clamp(40px,8vw,80px)] font-bold leading-[1.05] text-[#8892b0]">I build things for the web.</h2>
+      <p className="mt-6 max-w-[540px] text-base leading-relaxed sm:text-lg">
+        I&apos;m a software engineer focused on creating thoughtful, accessible digital experiences.
+        Currently, I&apos;m growing my skills through hands-on projects and new opportunities.
       </p>
-      <button className="bg-[#64ffda] text-[#0a192f] px-4 py-2 rounded mt-4 hover:bg-[#52e0c4] transition-colors duration-300">
-        Check out my path!
-      </button>
+      <div className="mt-12">
+        <a href="#work" className="rounded border border-[#64ffda] px-7 py-4 font-mono text-sm text-[#64ffda] transition hover:bg-[#64ffda]/10">
+          Check out my work!
+        </a>
+      </div>
     </section>
   );
 }

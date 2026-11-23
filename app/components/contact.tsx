@@ -1,10 +1,14 @@
 export default function Contact() {
-    return (
-        <section className="w-full bg-[#0a192f] text-white min-h-screen flex flex-col gap-4">
-            <h1 className="text-4xl font-bold"><span>04.</span>Get In Touch <hr/></h1>
-            <p className="text-lg text-gray-600 max-w-xl text-center">
-                I’m currently looking for new opportunities, my inbox is always open. Whether you have a question or just want to say hi, I’ll try my best to get back to you!
-            </p>
-        </section>
-    );
+  return (
+    <section id="contact" className="mx-auto max-w-[600px] py-24 text-center sm:py-32">
+      <p className="mb-4 font-mono text-base text-[#64ffda]"><span className="mr-2">04.</span>What&apos;s Next?</p>
+      <h2 className="text-[clamp(40px,7vw,60px)] font-bold text-[#ccd6f6]">Get In Touch</h2>
+      <p className="mx-auto mt-5 max-w-[540px] leading-relaxed">
+        I&apos;m currently looking for new opportunities. Whether you have a question, a project, or just want to say hi, my inbox is always open.
+      </p>
+      <a href="mailto:samuel@example.com" className="mt-12 inline-block rounded border border-[#64ffda] px-7 py-4 font-mono text-sm text-[#64ffda] transition hover:bg-[#64ffda]/10">
+        Say Hello
+      </a>
+    </section>
+  );
 }
