@@ -1,9 +1,11 @@
 # Samuel Sylvester Portfolio
 
-A responsive personal portfolio built with Next.js. It introduces Samuel,
+A completed, responsive personal portfolio built with Next.js. It introduces Samuel,
 highlights frontend experience at Ductape Technologies, shares selected
 projects, and provides contact links. The visual design is inspired by
 [Brittany Chiang's v4 portfolio](https://v4.brittanychiang.com/).
+
+The portfolio is complete. A resume PDF will be added later.
 
 ## Tech Stack
 
@@ -78,16 +80,14 @@ public/
 └── profile.jpeg        # Additional profile image asset
 ```
 
-## Content and Links to Review
+## Planned Follow-up
 
-- The GitHub and LinkedIn links in the page's left social rail currently point
-  to generic profile pages; replace them with the correct profile URLs.
-- The left-rail email link still uses `samuel@example.com`; the contact section
-  and right rail use `samsylvester09@gmail.com`.
-- The navigation points to `/resume.pdf`, but that file is not currently in
-  `public/`. Add the resume there or update/remove the link.
-- Erastos Backend links to its GitHub repository. Add verified repository or
-  live-site links for Meatopia and Kindred when available.
+- Add the resume PDF as `public/resume.pdf`; the navigation already links to
+  that path.
+
+The GitHub and LinkedIn links are generic placeholders, and the left-rail email
+still uses `samuel@example.com`. The contact section and right rail use
+`samsylvester09@gmail.com`.
 
 ## Editing
 

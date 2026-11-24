@@ -19,14 +19,16 @@ export default function Work() {
         "Paystack",
         "Nodemailer",
       ],
-      // github: "https://github.com/Sylvester009/...",
-      // live: "https://...",
+      github: "https://github.com/Sylvester009/meatopia",
+      live: "https://www.meatopia.com.ng/",
     },
     {
       title: "Kindred",
       description:
         "A professional networking platform that models members, organizations, projects, and skills as a graph. Multi-hop discovery surfaces connections up to three degrees of separation using parameterized Cypher queries.",
       tech: ["Next.js", "TypeScript", "Neo4j", "Cypher", "Vercel"],
+        github: "https://github.com/Sylvester009/Kindred",
+        live: "https://kindred-orcin-nine.vercel.app/",
     },
   ];
 
@@ -66,6 +68,25 @@ export default function Work() {
                   >
                     <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current">
                       <path d="M12 .5A12 12 0 0 0 8.2 23.9c.6.1.8-.3.8-.6v-2.1c-3.3.7-4-1.4-4-1.4-.5-1.4-1.3-1.7-1.3-1.7-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6A4.7 4.7 0 0 0 5.7 9c-.1-.3-.5-1.5.1-3.1 0 0 1-.3 3.3 1.2a11.4 11.4 0 0 1 6 0C17.4 5.6 18.4 6 18.4 6c.6 1.6.2 2.8.1 3.1a4.7 4.7 0 0 1 1.3 3.3c0 4.7-2.8 5.7-5.5 6 .5.4.9 1.2.9 2.3v3.6c0 .3.2.7.8.6A12 12 0 0 0 12 .5Z" />
+                    </svg>
+                  </a>
+                )}
+                {project.live && (
+                  <a
+                    href={project.live}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} Live`}
+                    className="text-[#a8b2d1] transition hover:text-[#64ffda]"
+                  >
+                    <svg
+                      viewBox="0 0 24 24"
+                      className="h-5 w-5 fill-none stroke-current"
+                      strokeWidth="1.5"
+                    >
+                      <path d="M4.75 4.75h4.5v-1.5h-6a1.25 1.25 0 0 0-1.25 1.25v15a1.25 1.25 0 0 0 1.25 1.25h15a1.25 1.25 0 0 0 1.25-1.25v-6h-1.5v4.5h-15v-15Z" />
+                      <path d="M14.75 3.25h6v6h-1.5v-4.5h-4.5v-1.5Z" />
+                      <path d="M10.75 13.25l-3.5 3.5-2-2" />
                     </svg>
                   </a>
                 )}

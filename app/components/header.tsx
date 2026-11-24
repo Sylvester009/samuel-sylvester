@@ -10,7 +10,6 @@ const NAV_LINKS = [
   { href: "#contact", label: "Contact" },
 ] as const;
 
-
 const linkStyles =
   "text-slate-text transition-colors hover:text-accent focus-visible:text-accent focus-visible:outline-none";
 
@@ -66,7 +65,7 @@ function NavItems({
         target="_blank"
         rel="noopener noreferrer"
         onClick={onNavigate}
-        className="rounded border border-accent px-4 py-3 text-accent transition-colors hover:bg-accent/10 focus-visible:bg-accent/10 focus-visible:outline-none"
+        className={`rounded border border-accent px-4 py-3 text-accent transition-colors hover:bg-accent/10 focus-visible:bg-accent/10 focus-visible:outline-none ${className}`}
       >
         Resume
       </Link>
@@ -81,12 +80,13 @@ export default function Header() {
   // Escape to close + lock body scroll while the menu is open
   useEffect(() => {
     if (!open) return;
+    const previousOverflow = document.body.style.overflow;
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && close();
     document.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = "";
+      document.body.style.overflow = previousOverflow;
     };
   }, [open]);
 
@@ -99,7 +99,7 @@ export default function Header() {
   }, []);
 
   return (
-    <header className="fixed inset-x-0 top-0 z-40 flex h-[70px] items-center justify-between bg-navy/90 px-6 backdrop-blur-md sm:h-[100px] sm:px-12">
+    <header className="fixed inset-x-0 top-0 z-40 flex h-[70px] items-center justify-between bg-navy/90 px-5 backdrop-blur-md sm:h-[100px] sm:px-12">
       <Logo />
 
       {/* Desktop nav */}
@@ -147,15 +147,16 @@ export default function Header() {
           aria-label="Close menu"
           tabIndex={-1}
           onClick={close}
-          className="absolute inset-0 bg-black/50"
+          className="absolute inset-0 bg-black/55 backdrop-blur-[2px]"
         />
         <nav
           aria-label="Mobile"
-          className="absolute inset-y-0 right-0 flex w-[min(75vw,400px)] flex-col items-center justify-center gap-8 bg-navy-light px-8 font-mono text-sm shadow-2xl"
+          className="absolute inset-y-0 right-0 flex h-dvh w-[min(82vw,360px)] flex-col items-center justify-start gap-5 overflow-y-auto border-l border-line bg-navy-light px-7 pt-[max(5rem,env(safe-area-inset-top))] pb-[max(2rem,env(safe-area-inset-bottom))] font-mono text-sm shadow-2xl"
         >
+          <span className="text-[10px] uppercase tracking-[0.3em] text-slate-muted"></span>
           <NavItems
             onNavigate={close}
-            className="flex flex-col items-center gap-1"
+            className="flex min-h-11 items-center justify-center px-3"
           />
         </nav>
       </div>
