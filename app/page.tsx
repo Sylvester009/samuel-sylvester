@@ -21,8 +21,8 @@ export default function Home() {
         </a>
       </aside>
       <aside className="fixed bottom-0 right-6 z-30 hidden w-10 items-center lg:flex">
-        <a href="mailto:samuel@example.com" className="vertical-email font-mono text-xs tracking-[0.2em] text-[#a8b2d1] transition hover:-translate-y-1 hover:text-[#64ffda]">
-          samuel@example.com
+        <a href="mailto:samsylvester09@gmail.com" className="vertical-email font-mono text-xs tracking-[0.2em] text-[#a8b2d1] transition hover:-translate-y-1 hover:text-[#64ffda]">
+          samsylvester09@gmail.com
         </a>
         <div className="ml-5 h-24 w-px bg-[#a8b2d1]" />
       </aside>
@@ -34,7 +34,7 @@ export default function Home() {
         <Contact />
       </main>
       <footer className="pb-8 pt-20 text-center font-mono text-xs text-[#a8b2d1]">
-        <p>Designed and built by Samuel Sylvester</p>
+        <p>Design inspired by Brittany Chiang and built by Samuel Sylvester</p>
       </footer>
     </div>
   );

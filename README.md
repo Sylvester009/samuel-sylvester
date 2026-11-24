@@ -1,82 +1,96 @@
 # Samuel Sylvester Portfolio
 
-A responsive personal portfolio inspired by the Brittany Chiang v4 design.
-The site presents Samuel Sylvester's introduction, background, experience,
-featured projects, and contact call-to-action.
-
-Some profile, experience, project, social, and email details are demo values
-that will be replaced with real information.
+A responsive personal portfolio built with Next.js. It introduces Samuel,
+highlights frontend experience at Ductape Technologies, shares selected
+projects, and provides contact links. The visual design is inspired by
+[Brittany Chiang's v4 portfolio](https://v4.brittanychiang.com/).
 
 ## Tech Stack
 
-- Next.js 16
-- React 19
+- Next.js 16 and React 19
 - TypeScript
 - Tailwind CSS 4
 - Turbopack
-- Lucide React
+- Geist fonts via `next/font`
 
-## Features
+## Getting Started
 
-- Fixed navigation with numbered section links
-- Large, responsive hero introduction
-- Navy and mint visual theme
-- Fixed social and email links on larger screens
-- About, experience, work, and contact sections
-- Responsive project cards and mobile-friendly layout
-- Smooth in-page anchor navigation
-- Placeholder profile and project content
-
-## Local Development
-
-Use Node.js and npm, then install dependencies:
+Install dependencies and start the development server:
 
 ```bash
 npm install
-```
-
-Start the development server on port 3000:
-
-```bash
 npm run dev -- -p 3000
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000). If port 3000 is already
+in use, stop the process using it or choose another port, for example:
+
+```bash
+npm run dev -- -p 3001
+```
 
 ## Scripts
 
-```bash
-npm run dev -- -p 3000  # Start the development server
-npm run build          # Create a production build
-npm run start          # Start the production server
-npm run lint           # Run ESLint
-```
+| Command | Description |
+| --- | --- |
+| `npm run dev -- -p 3000` | Start the development server on port 3000 |
+| `npm run build` | Create a production build |
+| `npm run start` | Serve the production build |
+| `npm run lint` | Run ESLint |
 
-## Demo Content
+## Portfolio Sections
 
-The following values are placeholders:
+- **Home:** Introduction and link to the project section
+- **About:** Background, Nine Realms learning journey, technologies, and profile photo
+- **Experience:** Frontend Developer role at Ductape Technologies
+- **Work:** Erastos Backend, Meatopia, and Kindred project cards
+- **Contact:** Email call-to-action
 
-- `samuel@example.com`
-- Demo Studio and the listed experience entries
-- Project Showcase and Developer Dashboard project details
-- Generic GitHub and LinkedIn links
-- The profile placeholder in the About section
+The navigation includes a responsive mobile menu, numbered section links, and
+a resume link. The experience tabs support keyboard navigation.
+
+## Featured Projects
+
+- **Erastos Backend:** Go REST API for library books using Gin and pgx. The
+  handlers currently operate on in-memory sample data; they do not persist
+  changes to PostgreSQL.
+- **Meatopia:** E-commerce platform with product search and filtering, a
+  persistent cart, Paystack payments, an owner dashboard, and order emails.
+- **Kindred:** Professional networking platform that models members,
+  organizations, projects, and skills as a graph, with multi-hop discovery.
 
 ## Project Structure
 
-- `app/page.tsx` - Main portfolio page
-- `app/layout.tsx` - Root layout and metadata
-- `app/components/header.tsx` - Fixed navigation
-- `app/components/hero.tsx` - Introductory hero section
-- `app/components/about.tsx` - Profile and technology list
-- `app/components/experience.tsx` - Demo work experience
-- `app/components/work.tsx` - Demo project cards
-- `app/components/contact.tsx` - Contact call-to-action
-- `app/globals.css` - Global Tailwind CSS imports
-- `public/` - Static assets
+```text
+app/
+├── components/
+│   ├── about.tsx       # Bio, technology list, and profile photo
+│   ├── contact.tsx     # Contact section
+│   ├── experience.tsx  # Work history and keyboard-accessible tabs
+│   ├── header.tsx      # Desktop navigation and mobile menu
+│   ├── hero.tsx        # Introduction
+│   └── work.tsx        # Featured project cards
+├── globals.css         # Tailwind theme and global styles
+├── layout.tsx          # Root layout, fonts, and metadata
+└── page.tsx            # Page composition and social links
+public/
+├── me.png              # Profile image used in About
+└── profile.jpeg        # Additional profile image asset
+```
+
+## Content and Links to Review
+
+- The GitHub and LinkedIn links in the page's left social rail currently point
+  to generic profile pages; replace them with the correct profile URLs.
+- The left-rail email link still uses `samuel@example.com`; the contact section
+  and right rail use `samsylvester09@gmail.com`.
+- The navigation points to `/resume.pdf`, but that file is not currently in
+  `public/`. Add the resume there or update/remove the link.
+- Erastos Backend links to its GitHub repository. Add verified repository or
+  live-site links for Meatopia and Kindred when available.
 
 ## Editing
 
-Update demo content directly in the section components under
-`app/components/`. Update page composition in `app/page.tsx`, and adjust global
-layout and metadata in `app/layout.tsx` and `app/globals.css`.
+Update section content in `app/components/`. The page layout and social rail
+are in `app/page.tsx`; site-wide metadata and fonts are in `app/layout.tsx`.
+Place images, the resume PDF, and other static assets in `public/`.
