@@ -23,7 +23,7 @@ export default function About() {
         <div className="space-y-4 text-base leading-relaxed">
           <p>
             Hello! My name is Sylvester, and I enjoy building things for the
-            web. I started my software development journey in 2024 through the
+            web. I started my software development journey in 2022 through the
             ALX Software Engineering program, and I&apos;ve been fascinated by
             turning ideas into functional products ever since.
           </p>

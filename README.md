@@ -5,8 +5,6 @@ highlights frontend experience at Ductape Technologies, shares selected
 projects, and provides contact links. The visual design is inspired by
 [Brittany Chiang's v4 portfolio](https://v4.brittanychiang.com/).
 
-The portfolio is complete. A resume PDF will be added later.
-
 ## Tech Stack
 
 - Next.js 16 and React 19
@@ -21,21 +19,18 @@ Install dependencies and start the development server:
 
 ```bash
 npm install
-npm run dev -- -p 3000
+npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000). If port 3000 is already
-in use, stop the process using it or choose another port, for example:
-
-```bash
-npm run dev -- -p 3001
-```
+The development server runs on [http://localhost:3000](http://localhost:3000)
+by default. If port 3000 is already in use, stop the process using it or start
+the server on a different port with `npm run dev -- -p 3001`.
 
 ## Scripts
 
 | Command | Description |
 | --- | --- |
-| `npm run dev -- -p 3000` | Start the development server on port 3000 |
+| `npm run dev` | Start the development server on port 3000 |
 | `npm run build` | Create a production build |
 | `npm run start` | Serve the production build |
 | `npm run lint` | Run ESLint |
@@ -49,7 +44,7 @@ npm run dev -- -p 3001
 - **Contact:** Email call-to-action
 
 The navigation includes a responsive mobile menu, numbered section links, and
-a resume link. The experience tabs support keyboard navigation.
+a link to the included resume PDF. The experience tabs support keyboard navigation.
 
 ## Featured Projects
 
@@ -77,13 +72,9 @@ app/
 └── page.tsx            # Page composition and social links
 public/
 ├── me.png              # Profile image used in About
-└── profile.jpeg        # Additional profile image asset
+├── profile.jpeg        # Additional profile image asset
+└── Resume.pdf          # Resume linked from the navigation
 ```
-
-## Planned Follow-up
-
-- Add the resume PDF as `public/resume.pdf`; the navigation already links to
-  that path.
 
 The GitHub and LinkedIn links are generic placeholders, and the left-rail email
 still uses `samuel@example.com`. The contact section and right rail use
